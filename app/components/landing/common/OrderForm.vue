@@ -72,7 +72,9 @@ const openTelegram = () => {
 					<div v-if="activeTab === 'phone'" class="space-y-4">
 						<div class="grid grid-cols-1 gap-4">
 							<div>
+								<label for="name" class="sr-only">Имя и фамилия</label>
 								<input
+									id="name"
 									v-model="formData.name"
 									type="text"
 									placeholder="Имя и фамилия"
@@ -80,35 +82,43 @@ const openTelegram = () => {
 								/>
 							</div>
 							<div>
+								<label for="email" class="sr-only">Email</label>
 								<input
+									id="email"
 									v-model="formData.email"
 									type="email"
 									placeholder="Email"
-									class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+									class="w-full px-4 py-3 bg-transparent border-2 border-light-text/10 dark:border-dark-text/10 rounded-xl focus:border-lightPink outline-none transition-colors"
 								/>
 							</div>
 							<div>
+								<label for="phone" class="sr-only">Номер телефона</label>
 								<input
+									id="phone"
 									v-model="formData.phone"
 									type="tel"
 									placeholder="Номер телефона"
-									class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+									class="w-full px-4 py-3 bg-transparent border-2 border-light-text/10 dark:border-dark-text/10 rounded-xl focus:border-lightPink outline-none transition-colors"
 								/>
 							</div>
 							<div>
+								<label for="company" class="sr-only">Название компании</label>
 								<input
+									id="company"
 									v-model="formData.company"
 									type="text"
 									placeholder="Название компании"
-									class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+									class="w-full px-4 py-3 bg-transparent border-2 border-light-text/10 dark:border-dark-text/10 rounded-xl focus:border-lightPink outline-none transition-colors"
 								/>
 							</div>
 							<div>
+								<label for="website" class="sr-only">Сайт</label>
 								<input
+									id="website"
 									v-model="formData.website"
 									type="url"
 									placeholder="Сайт"
-									class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+									class="w-full px-4 py-3 bg-transparent border-2 border-light-text/10 dark:border-dark-text/10 rounded-xl focus:border-lightPink outline-none transition-colors"
 								/>
 							</div>
 						</div>

@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { SpeedInsights } from '@vercel/speed-insights/nuxt'
+</script>
+
 <template>
 	<div
 		class="font-golos bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text relative overflow-hidden"
@@ -14,6 +18,7 @@
 			<NuxtLayout>
 				<NuxtPage />
 			</NuxtLayout>
+			<SpeedInsights />
 		</div>
 	</div>
 </template>
