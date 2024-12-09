@@ -2,7 +2,9 @@
 
 <template>
 	<Hero />
-	<Fields />
+	<Presentation />
+	<Solutions />
+	<!-- <Fields />
 	<Preferences />
-	<Benefits />
+	<Benefits /> -->
 </template>

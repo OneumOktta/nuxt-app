@@ -46,14 +46,16 @@ const updateData = (event: Event) => {
 </script>
 
 <template>
-	<section id="prices" class="container bg-gray-200 mx-auto px-4 py-12">
-		<h2 class="text-3xl font-bold text-center mb-8">Тарифы</h2>
+	<section id="prices" class="container mx-auto px-4 py-12">
+		<h2 class="text-5xl font-semibold text-center mb-16">Тарифы</h2>
 		<div
-			class="bg-gray-100 rounded-xl p-8 grid grid-cols-1 md:grid-cols-3 gap-8 relative"
+			class="bg-light-panels dark:bg-dark-panels rounded-3xl p-8 grid grid-cols-1 md:grid-cols-3 gap-8 relative transition-colors"
 		>
 			<!-- First Column -->
 			<div class="space-y-6">
-				<p class="font-medium">Цены зависят от количества токенов в месяц</p>
+				<p class="font-medium text-light-text dark:text-dark-text">
+					Цены зависят от количества токенов в месяц
+				</p>
 
 				<!-- Tokens Slider -->
 				<div class="space-y-2">
@@ -66,7 +68,7 @@ const updateData = (event: Event) => {
 						:step="1"
 						class="w-full"
 					/>
-					<p class="text-sm mt-4">
+					<p class="text-sm mt-4 text-light-text/80 dark:text-dark-text/80">
 						до {{ formatNumber(tokensPerMonth) }} посетителей в месяц
 					</p>
 				</div>
@@ -82,16 +84,16 @@ const updateData = (event: Event) => {
 						:step="1"
 						class="w-full"
 					/>
-					<p class="text-sm mt-4">
+					<p class="text-sm mt-4 text-light-text/80 dark:text-dark-text/80">
 						до {{ formatNumber(siteDataAmount) }} данных о сайте
 					</p>
 				</div>
 
 				<div class="space-y-2 pt-4">
-					<p class="text-sm">
+					<p class="text-sm text-light-text/60 dark:text-dark-text/60">
 						Количество подключаемых членов команды не влияет на цену
 					</p>
-					<p class="text-sm">
+					<p class="text-sm text-light-text/60 dark:text-dark-text/60">
 						При превышении лимита токенов взимается дополнительная плата
 					</p>
 				</div>
@@ -99,42 +101,52 @@ const updateData = (event: Event) => {
 
 			<!-- Divider -->
 			<div
-				class="hidden md:block absolute left-1/3 top-8 bottom-8 w-px bg-gray-300"
+				class="hidden md:block absolute left-1/3 top-8 bottom-8 w-px bg-light-text/10 dark:bg-dark-text/10"
 			></div>
 
 			<!-- Second Column -->
 			<div class="space-y-6">
 				<div class="space-y-2">
-					<p class="text-lg">{{ formatNumber(tokensPerMonth) }} посетителей</p>
-					<p class="text-lg">{{ formatNumber(siteDataAmount) }} токенов</p>
+					<p class="text-lg text-light-text dark:text-dark-text">
+						{{ formatNumber(tokensPerMonth) }} посетителей
+					</p>
+					<p class="text-lg text-light-text dark:text-dark-text">
+						{{ formatNumber(siteDataAmount) }} токенов
+					</p>
 				</div>
 
 				<div class="flex items-center space-x-3">
-					<span class="text-2xl font-medium"
-						>{{ formatPrice(discountedPrice) }} ₽</span
+					<span
+						class="text-2xl font-medium text-light-text dark:text-dark-text"
 					>
-					<template v-if="currentPeriod.discount > 0">
-						<span class="text-gray-500 line-through text-base"
-							>{{ formatPrice(totalAmount) }} ₽</span
-						>
-						<span
-							class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-600 text-sm font-medium"
-						>
-							-{{ currentPeriod.discount * 100 }}%
-						</span>
-					</template>
+						{{ formatPrice(discountedPrice) }} ₽
+					</span>
+
+					<span
+						v-if="currentPeriod.discount > 0"
+						class="text-sm text-light-text/40 dark:text-dark-text/40 line-through"
+					>
+						{{ formatPrice(totalAmount) }} ₽
+					</span>
+
+					<span
+						v-if="currentPeriod.discount > 0"
+						class="px-2 py-1 text-xs rounded-full bg-gradient-to-r from-lightPink to-lightBlue text-white"
+					>
+						-{{ currentPeriod.discount * 100 }}%
+					</span>
 				</div>
 
 				<!-- Period Selector -->
-				<div class="bg-gray-200 rounded-full p-1 flex">
+				<div class="bg-light-panels dark:bg-dark-panels rounded-full p-1 flex">
 					<template v-for="period in periods" :key="period.id">
 						<button
 							@click="selectedPeriod = period.id"
 							:class="[
-								'flex-1 px-4 py-2 text-sm rounded-full transition-colors duration-200',
+								'flex-1 px-4 py-2 text-sm rounded-full transition-all duration-300',
 								selectedPeriod === period.id
-									? 'bg-white shadow-sm text-gray-800'
-									: 'text-gray-600 hover:text-gray-800',
+									? 'bg-gradient-to-r from-lightPink to-lightBlue text-white shadow-lg'
+									: 'text-light-text dark:text-dark-text hover:bg-light-text/5 dark:hover:bg-dark-text/5',
 							]"
 						>
 							{{ period.label }}
@@ -143,12 +155,12 @@ const updateData = (event: Event) => {
 				</div>
 
 				<div class="pt-4 space-y-2">
-					<button
-						class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-colors duration-200"
+					<GradientButton class="w-full"> Выбрать тариф </GradientButton>
+					<p
+						class="text-center text-sm text-light-text/60 dark:text-dark-text/60"
 					>
-						Выбрать тариф
-					</button>
-					<p class="text-center text-sm text-gray-600">14 дней бесплатно</p>
+						14 дней бесплатно
+					</p>
 				</div>
 			</div>
 
@@ -167,7 +179,9 @@ const updateData = (event: Event) => {
 						]"
 						:key="index"
 						class="flex items-center flex-1 px-4"
-						:class="index % 2 === 0 ? '' : 'bg-gray-200 rounded-xl'"
+						:class="
+							index % 2 === 0 ? '' : 'border-2 border-lightPink/20 rounded-xl'
+						"
 					>
 						<div class="flex items-center space-x-3 py-3">
 							<svg
@@ -188,20 +202,18 @@ const updateData = (event: Event) => {
 			</div>
 		</div>
 		<!-- Enterprise Plan -->
-		<div class="border-2 border-white rounded-xl p-6 my-8">
+		<div class="border-2 border-lightPink/50 rounded-3xl p-6 my-8">
 			<div class="flex justify-between items-center">
 				<div>
 					<h3 class="text-xl font-bold mb-2">Oneum Enterprise</h3>
-					<p class="text-gray-600 mb-2">
+					<p class="text-light-text/80 dark:text-dark-text/80 mb-2">
 						Для крупного бизнеса, который хочет уверенно масштабироваться
 					</p>
-					<p class="text-sm text-gray-400">∞ количество запросов</p>
+					<p class="text-sm text-light-text/60 dark:text-dark-text/60">
+						∞ количество запросов
+					</p>
 				</div>
-				<button
-					class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors"
-				>
-					Связаться с нами
-				</button>
+				<GradientButton> Связаться с нами </GradientButton>
 			</div>
 		</div>
 	</section>
@@ -210,9 +222,10 @@ const updateData = (event: Event) => {
 <style scoped>
 input[type='range'] {
 	-webkit-appearance: none;
+	appearance: none;
 	width: 100%;
 	height: 4px;
-	background: #e2e8f0;
+	background: theme('colors.lightPink');
 	border-radius: 2px;
 	outline: none;
 	margin: 1rem 0;
@@ -223,7 +236,7 @@ input[type='range']::-webkit-slider-thumb {
 	appearance: none;
 	width: 16px;
 	height: 16px;
-	background: #4f46e5;
+	background: theme('colors.lightBlue');
 	border-radius: 50%;
 	cursor: pointer;
 }
@@ -231,7 +244,7 @@ input[type='range']::-webkit-slider-thumb {
 input[type='range']::-moz-range-thumb {
 	width: 16px;
 	height: 16px;
-	background: #4f46e5;
+	background: theme('colors.lightBlue');
 	border-radius: 50%;
 	cursor: pointer;
 	border: none;

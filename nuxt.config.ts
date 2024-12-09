@@ -44,4 +44,8 @@ export default defineNuxtConfig({
 	colorMode: {
 		preference: 'auto',
 	},
+	devServer: {
+		host: '0.0.0.0',
+		port: 3100,
+	},
 })
