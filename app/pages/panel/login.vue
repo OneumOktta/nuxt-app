@@ -11,7 +11,8 @@ const formData = ref({
 const rememberMe = ref(false)
 
 const handleSubmit = () => {
-	console.log('Login form submitted:', formData.value)
+	// TODO: Реализовать авторизацию
+	return navigateTo('/panel')
 }
 </script>
 
@@ -51,7 +52,7 @@ const handleSubmit = () => {
 			</div>
 
 			<div class="space-y-10 pt-8">
-				<GradientButton class="w-full"> Войти </GradientButton>
+				<GradientButton type="submit" class="w-full"> Войти </GradientButton>
 
 				<!-- Social Login -->
 				<div class="text-center">

@@ -1,10 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import PanelHeader from '~/components/panel/PanelHeader.vue'
+import PanelSidebar from '~/components/panel/PanelSidebar.vue'
+</script>
 
 <template>
-	<main class="flex min-h-screen w-full">
-		<Sidebar class="w-[250px] flex-shrink-0 border-r border-gray-200" />
-		<div class="flex-grow p-5">
-			<slot />
+	<div class="min-h-screen flex flex-col">
+		<PanelHeader />
+		<div class="flex flex-1">
+			<PanelSidebar />
+			<main class="flex-1 pl-2 pr-6 pb-6 pt-2">
+				<slot />
+			</main>
 		</div>
-	</main>
+	</div>
 </template>
