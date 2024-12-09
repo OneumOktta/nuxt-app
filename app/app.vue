@@ -4,7 +4,7 @@ import { SpeedInsights } from '@vercel/speed-insights/nuxt'
 
 <template>
 	<div
-		class="font-golos bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text relative overflow-hidden"
+		class="font-ttnorms bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text relative overflow-hidden"
 	>
 		<div
 			class="fixed -top-[10%] -right-[10%] w-[600px] h-[600px] rounded-full bg-primary-gradient opacity-30 blur-[120px] animate-float"
@@ -15,6 +15,7 @@ import { SpeedInsights } from '@vercel/speed-insights/nuxt'
 
 		<!-- Основной контент -->
 		<div class="relative z-10">
+			<ThemeToggle />
 			<NuxtLayout>
 				<NuxtPage />
 			</NuxtLayout>

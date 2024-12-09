@@ -24,7 +24,6 @@ const openTelegram = () => {
 	<section id="order-form" class="container py-24">
 		<div class="bg-light-panels dark:bg-dark-panels rounded-3xl p-12">
 			<div class="max-w-3xl mx-auto">
-				<!-- Header -->
 				<div class="text-center mb-8">
 					<h2
 						class="text-5xl font-semibold mb-2 text-light-text dark:text-dark-text"
@@ -36,7 +35,6 @@ const openTelegram = () => {
 					</p>
 				</div>
 
-				<!-- Tabs -->
 				<div
 					class="flex justify-center mb-6 border-b border-light-text/10 dark:border-dark-text/10"
 				>
@@ -66,61 +64,46 @@ const openTelegram = () => {
 					</div>
 				</div>
 
-				<!-- Tab Content Container with fixed height -->
 				<div class="min-h-[400px]">
-					<!-- Phone/Email Form -->
 					<div v-if="activeTab === 'phone'" class="space-y-4">
 						<div class="grid grid-cols-1 gap-4">
-							<div>
-								<label for="name" class="sr-only">Имя и фамилия</label>
-								<input
-									id="name"
-									v-model="formData.name"
-									type="text"
-									placeholder="Имя и фамилия"
-									class="w-full px-4 py-3 bg-transparent border-2 border-light-text/10 dark:border-dark-text/10 rounded-xl focus:border-lightPink outline-none transition-colors"
-								/>
-							</div>
-							<div>
-								<label for="email" class="sr-only">Email</label>
-								<input
-									id="email"
-									v-model="formData.email"
-									type="email"
-									placeholder="Email"
-									class="w-full px-4 py-3 bg-transparent border-2 border-light-text/10 dark:border-dark-text/10 rounded-xl focus:border-lightPink outline-none transition-colors"
-								/>
-							</div>
-							<div>
-								<label for="phone" class="sr-only">Номер телефона</label>
-								<input
-									id="phone"
-									v-model="formData.phone"
-									type="tel"
-									placeholder="Номер телефона"
-									class="w-full px-4 py-3 bg-transparent border-2 border-light-text/10 dark:border-dark-text/10 rounded-xl focus:border-lightPink outline-none transition-colors"
-								/>
-							</div>
-							<div>
-								<label for="company" class="sr-only">Название компании</label>
-								<input
-									id="company"
-									v-model="formData.company"
-									type="text"
-									placeholder="Название компании"
-									class="w-full px-4 py-3 bg-transparent border-2 border-light-text/10 dark:border-dark-text/10 rounded-xl focus:border-lightPink outline-none transition-colors"
-								/>
-							</div>
-							<div>
-								<label for="website" class="sr-only">Сайт</label>
-								<input
-									id="website"
-									v-model="formData.website"
-									type="url"
-									placeholder="Сайт"
-									class="w-full px-4 py-3 bg-transparent border-2 border-light-text/10 dark:border-dark-text/10 rounded-xl focus:border-lightPink outline-none transition-colors"
-								/>
-							</div>
+							<BaseInput
+								id="name"
+								v-model="formData.name"
+								label="Имя и фамилия"
+								icon="basil:user-outline"
+								required
+							/>
+							<BaseInput
+								id="email"
+								v-model="formData.email"
+								type="email"
+								label="Email"
+								icon="basil:envelope-outline"
+								required
+							/>
+							<BaseInput
+								id="phone"
+								v-model="formData.phone"
+								type="tel"
+								label="Номер телефона"
+								icon="basil:phone-outline"
+								required
+							/>
+							<BaseInput
+								id="company"
+								v-model="formData.company"
+								label="Название компании"
+								icon="stash:people-group"
+								required
+							/>
+							<BaseInput
+								id="website"
+								v-model="formData.website"
+								type="url"
+								label="Сайт"
+								icon="dashicons:admin-site-alt"
+							/>
 						</div>
 
 						<button

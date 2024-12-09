@@ -36,9 +36,10 @@ const config: Config = {
 				'primary-gradient': 'linear-gradient(45deg, #FF6CAB, #7366FF)',
 				'primary-gradient-alt': 'linear-gradient(225deg, #FF6CAB, #7366FF)',
 			},
-		},
-		fontFamily: {
-			golos: ['Golos Text', 'sans-serif'],
+			fontFamily: {
+				golos: ['Golos Text', 'sans-serif'],
+				ttnorms: ['TT Norms', 'sans-serif'],
+			},
 		},
 		container: {
 			center: true,

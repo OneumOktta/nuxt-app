@@ -47,7 +47,7 @@ const scrollToSection = (sectionId: string) => {
 		</nav>
 
 		<div class="flex items-center gap-[20px] flex-shrink-0">
-			<NuxtLink to="/login" class="relative group">
+			<NuxtLink to="/panel/login" class="relative group">
 				<span class="relative">
 					Войти
 					<span
@@ -56,7 +56,9 @@ const scrollToSection = (sectionId: string) => {
 				</span>
 			</NuxtLink>
 
-			<GradientButton to="/register"> Создать аккаунт </GradientButton>
+			<GradientButton @click="() => navigateTo('/registration')">
+				Создать аккаунт
+			</GradientButton>
 		</div>
 	</header>
 </template>
