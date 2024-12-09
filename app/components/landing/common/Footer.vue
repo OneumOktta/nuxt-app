@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { solutions, serviceLinks } from '~/constants/navigation'
+import { serviceLinks } from '~/constants/navigation'
+import { solutions } from '~/constants/solutions'
 </script>
 
 <template>
