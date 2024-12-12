@@ -4,16 +4,6 @@ import PanelSidebar from "~/components/panel/PanelSidebar.vue";
 </script>
 
 <template>
-  <!-- <div class="min-h-screen flex flex-col">
-    <PanelHeader />
-    <div class="flex flex-1">
-      <PanelSidebar />
-      <main class="flex-1 pl-2 pr-6 pb-6 pt-2">
-        <slot />
-      </main>
-    </div>
-  </div> -->
-
   <div class="min-h-screen grid grid-rows-[auto_1fr] grid-cols-1 p-6 gap-4">
     <header class="row-start-1 col-span-full">
       <PanelHeader />

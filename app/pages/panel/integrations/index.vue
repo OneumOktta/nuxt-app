@@ -80,7 +80,7 @@ const requestNewIntegration = () => {
                 class="text-purple-500 text-3xl font-bold flex items-center"
               >
                 <img
-                  src="/icons/viget-plus.svg"
+                  src="/icons/widget_add.svg"
                   alt=""
                   width="60"
                   height="65"
@@ -93,7 +93,7 @@ const requestNewIntegration = () => {
 
       <!-- Кнопка чата -->
       <button class="fixed bottom-9 right-9">
-        <img src="/icons/viget.svg" alt="" width="80" height="88" />
+        <img src="/icons/widget_talk.svg" alt="" width="80" height="88" />
       </button>
     </div>
   </PanelContent>
