@@ -19,12 +19,16 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, defineProps } from "vue";
 
+// Объявляем пропсы
 const props = defineProps({
   isOpen: { type: Boolean, required: true },
-  close: { type: Function, required: true },
+  close: {
+    type: Function as PropType<(event: MouseEvent) => void>,
+    required: true,
+  },
 });
 </script>
 
