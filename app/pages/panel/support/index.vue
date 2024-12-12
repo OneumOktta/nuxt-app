@@ -5,7 +5,7 @@
     >
       <div class="p-8">
         <!-- Заголовок -->
-        <h1 class="text-3xl font-semibold text-center text-purple-700 mb-8">
+        <h1 class="text-3xl font-semibold text-center text-[greyLight] mb-8">
           Справочный центр
         </h1>
         <p class="text-center text-gray-600 mb-8">
@@ -38,7 +38,15 @@
             @mouseenter="isHovered = index"
             @mouseleave="isHovered = null"
           >
-            <img :src="item.icon" alt="icon" class="mx-auto mb-4" />
+            <img
+              :src="item.icon"
+              alt="icon"
+              class="mx-auto mb-4 transition duration-300 ease-in-out"
+              :class="{
+                'filter dark:invert dark:brightness-75': true, // Адаптация цвета для темы
+                'hover:text-purple-600': isHovered === index, // Цвет при наведении
+              }"
+            />
             <h3
               :class="{
                 'text-lg font-medium text-center': true,
@@ -70,10 +78,13 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+import { useDark } from "@vueuse/core";
 
 definePageMeta({
   layout: "panel",
 });
+
+const isDarkMode = useDark();
 
 const items = ref([
   {
