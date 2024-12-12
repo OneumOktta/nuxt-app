@@ -4,7 +4,7 @@ import PanelSidebar from "~/components/panel/PanelSidebar.vue";
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col bg-gray-50">
+  <div class="min-h-screen flex flex-col">
     <PanelHeader />
     <div class="flex flex-1">
       <PanelSidebar />
