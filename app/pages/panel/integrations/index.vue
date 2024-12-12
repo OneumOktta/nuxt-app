@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref } from "vue";
+import Modal from "~/pages/panel/integrations/Modal.vue";
 import {
   connectedIntegrations,
   availableIntegrations,
@@ -9,8 +11,22 @@ definePageMeta({
   layout: "panel",
 });
 
+// Состояние модального окна
+const isModalOpen = ref(false);
+
+// Открытие модального окна
+const openModal = () => {
+  isModalOpen.value = true;
+};
+
+// Закрытие модального окна
+const closeModal = () => {
+  isModalOpen.value = false;
+};
+
 const requestNewIntegration = () => {
-  alert("Запрос на новую интеграцию отправлен!");
+  // alert("Запрос на новую интеграцию отправлен!");
+  openModal();
 };
 </script>
 
@@ -90,6 +106,46 @@ const requestNewIntegration = () => {
           </div>
         </div>
       </div>
+
+      <!-- Модальное окно -->
+      <Modal :isOpen="isModalOpen" :close="closeModal">
+        <h2 class="text-xl font-bold mb-4">Запрос на интеграцию</h2>
+        <form @submit.prevent="requestNewIntegration">
+          <div class="space-y-4">
+            <input
+              type="text"
+              placeholder="Ваше имя"
+              class="w-full border border-purple-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
+            />
+            <input
+              type="email"
+              placeholder="Электронная почта"
+              class="w-full border border-purple-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
+            />
+            <input
+              type="text"
+              placeholder="Номер телефона"
+              class="w-full border border-purple-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
+            />
+            <input
+              type="text"
+              placeholder="Название компании"
+              class="w-full border border-purple-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
+            />
+            <textarea
+              placeholder="Комментарий"
+              class="w-full border border-purple-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
+              rows="4"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full mt-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 rounded-lg"
+          >
+            Отправить
+          </button>
+        </form>
+      </Modal>
 
       <!-- Кнопка чата -->
       <button class="fixed bottom-9 right-9">
