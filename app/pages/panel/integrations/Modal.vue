@@ -32,6 +32,10 @@ const props = defineProps({
 });
 </script>
 
+<script lang="ts">
+// Убедитесь, что не используете export default {}, так как он не нужен в Composition API
+</script>
+
 <style scoped>
 /* Вы можете добавить дополнительные стили */
 </style>
