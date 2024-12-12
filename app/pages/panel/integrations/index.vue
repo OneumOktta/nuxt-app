@@ -25,7 +25,6 @@ const closeModal = () => {
 };
 
 const requestNewIntegration = () => {
-  // alert("Запрос на новую интеграцию отправлен!");
   openModal();
 };
 </script>
@@ -116,26 +115,26 @@ const requestNewIntegration = () => {
               <input
                 type="text"
                 placeholder="Ваше имя"
-                class="w-full border border-purple-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                class="w-full border border-purple-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400 dark:bg-dark-panels"
               />
               <input
                 type="email"
                 placeholder="Электронная почта"
-                class="w-full border border-purple-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                class="w-full border border-purple-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400 dark:bg-dark-panels"
               />
               <input
                 type="text"
                 placeholder="Номер телефона"
-                class="w-full border border-purple-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                class="w-full border border-purple-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400 dark:bg-dark-panels"
               />
               <input
                 type="text"
                 placeholder="Название компании"
-                class="w-full border border-purple-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                class="w-full border border-purple-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400 dark:bg-dark-panels"
               />
               <textarea
                 placeholder="Комментарий"
-                class="w-full border border-purple-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                class="w-full border border-purple-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400 dark:bg-dark-panels"
                 rows="4"
               ></textarea>
             </div>

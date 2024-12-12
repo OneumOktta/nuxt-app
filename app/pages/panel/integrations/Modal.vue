@@ -4,7 +4,7 @@
     class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
   >
     <div
-      class="bg-white dark:bg-dark-panels p-6 rounded-lg shadow-lg w-[400px] relative"
+      class="bg-white dark:bg-dark-panels p-6 rounded-2xl shadow-lg w-[636px] h-[784px] relative px-[130px] py-[112px]"
     >
       <!-- Кнопка закрытия -->
       <button
