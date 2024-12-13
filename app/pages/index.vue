@@ -1,10 +1,12 @@
 <script setup lang="ts"></script>
 
 <template>
-	<Hero />
-	<Presentation />
-	<Solutions />
-	<!-- <Fields />
-	<Preferences />
-	<Benefits /> -->
+  <div>
+    <Hero />
+    <Presentation />
+    <Solutions />
+    <!-- <Fields />
+		<Preferences />
+		<Benefits /> -->
+  </div>
 </template>
