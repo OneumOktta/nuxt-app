@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import PanelHeader from '~/components/panel/PanelHeader.vue'
-import PanelSidebar from '~/components/panel/PanelSidebar.vue'
+  import PanelHeader from '~/components/panel/PanelHeader.vue'
+  import PanelSidebar from '~/components/panel/PanelSidebar.vue'
 </script>
 
 <template>
-	<div class="min-h-screen flex flex-col">
-		<PanelHeader />
-		<div class="flex flex-1">
-			<PanelSidebar />
-			<main class="flex-1 pl-2 pr-6 pb-6 pt-2">
-				<slot />
-			</main>
-		</div>
-	</div>
+  <div class="flex min-h-screen flex-col">
+    <PanelHeader />
+    <div class="flex flex-1">
+      <PanelSidebar />
+      <main class="flex-1 pb-6 pl-2 pr-6 pt-2">
+        <slot />
+      </main>
+    </div>
+  </div>
 </template>

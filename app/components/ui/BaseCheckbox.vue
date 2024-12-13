@@ -1,32 +1,32 @@
 <script setup lang="ts">
-interface Props {
-	modelValue: boolean
-	label?: string
-	required?: boolean
-}
+  interface Props {
+    modelValue: boolean
+    label?: string
+    required?: boolean
+  }
 
-defineProps<Props>()
-defineEmits<{
-	'update:modelValue': [value: boolean]
-}>()
+  defineProps<Props>()
+  defineEmits<{
+    'update:modelValue': [value: boolean]
+  }>()
 </script>
 
 <template>
-	<label class="flex items-start gap-3 cursor-pointer select-none">
-		<input
-			:checked="modelValue"
-			type="checkbox"
-			class="w-5 h-5 border-2 border-light-text/10 dark:border-dark-text/10 rounded accent-lightBlue transition-colors cursor-pointer"
-			:required="required"
-			style="margin-top: 4px"
-			@change="
-				$emit('update:modelValue', ($event.target as HTMLInputElement).checked)
-			"
-		/>
-		<span class="text-lg text-light-text/60 dark:text-dark-text/60">
-			<slot>
-				{{ label }}
-			</slot>
-		</span>
-	</label>
+  <label class="flex cursor-pointer select-none items-start gap-3">
+    <input
+      :checked="modelValue"
+      type="checkbox"
+      class="h-5 w-5 cursor-pointer rounded border-2 border-light-text/10 accent-lightBlue transition-colors dark:border-dark-text/10"
+      :required="required"
+      style="margin-top: 4px"
+      @change="
+        $emit('update:modelValue', ($event.target as HTMLInputElement).checked)
+      "
+    />
+    <span class="text-lg text-light-text/60 dark:text-dark-text/60">
+      <slot>
+        {{ label }}
+      </slot>
+    </span>
+  </label>
 </template>
