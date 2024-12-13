@@ -36,6 +36,17 @@
     return error
   }
 
+  const formatPhone = (phone: string): string => {
+    const digits = phone.replace(/\D/g, '')
+
+    if (digits.length >= 10) {
+      const lastTenDigits = digits.slice(-10)
+      return `+7${lastTenDigits}`
+    }
+
+    return phone
+  }
+
   const handleSubmit = async () => {
     try {
       const validationErrors = validateForm(OrderFormData.value)
@@ -48,7 +59,11 @@
       error.value = ''
 
       const dataToSend = { ...OrderFormData.value }
-      if (!dataToSend.phone.trim()) dataToSend.phone = ''
+      if (!dataToSend.phone.trim()) {
+        dataToSend.phone = ''
+      } else {
+        dataToSend.phone = formatPhone(dataToSend.phone)
+      }
 
       await $fetch('/api/landing/order', {
         method: 'POST',
