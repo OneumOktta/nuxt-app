@@ -77,7 +77,9 @@ const isHovered = ref(null);
       class="col-span-2 row-span-2 bg-white shadow rounded-xl p-4 bg-light-panels dark:bg-dark-panels"
     >
       <p class="font-bold mb-2 text-[20px]">Среднее время ответа</p>
-      <div class="w-full h-32 bg-gray-100 rounded"></div>
+      <div class="w-full h-70 rounded overflow-hidden">
+        <img src="/mock/medium.png" alt="" class="w-full h-full" />
+      </div>
     </div>
 
     <!-- Посетители -->
@@ -111,7 +113,9 @@ const isHovered = ref(null);
       class="col-span-3 row-span-2 bg-white shadow rounded-xl p-4 bg-light-panels dark:bg-dark-panels"
     >
       <p class="font-bold mb-2 text-[20px]">Аналитика по запросам</p>
-      <div class="w-full h-32 bg-gray-100 rounded"></div>
+      <div class="w-full h-70 rounded overflow-hidden">
+        <img src="/mock/analytics.png" alt="" class="w-full h-full" />
+      </div>
     </div>
 
     <!-- Оценка удовлетворенности -->
@@ -119,7 +123,9 @@ const isHovered = ref(null);
       class="col-span-2 row-span-2 bg-white shadow rounded-xl p-4 bg-light-panels dark:bg-dark-panels"
     >
       <p class="font-bold mb-2 text-[20px]">Оценка удовлетворенности</p>
-      <div class="w-full h-32 bg-gray-100 rounded"></div>
+      <div class="w-full h-70 rounded overflow-hidden">
+        <img src="/mock/assessment.png" alt="" class="w-full h-full" />
+      </div>
     </div>
 
     <!-- Географические данные -->
@@ -127,7 +133,9 @@ const isHovered = ref(null);
       class="col-span-2 row-span-2 bg-white shadow rounded-xl p-4 bg-light-panels dark:bg-dark-panels"
     >
       <p class="font-bold mb-2 text-[20px]">Географические данные</p>
-      <div class="w-full h-32 bg-gray-100 rounded"></div>
+      <div class="w-full h-70 rounded overflow-hidden">
+        <img src="/mock/users.png" alt="" class="w-full h-full" />
+      </div>
     </div>
 
     <!-- Метрики -->
@@ -135,7 +143,9 @@ const isHovered = ref(null);
       class="col-span-3 row-span-2 bg-white shadow rounded-xl p-4 bg-light-panels dark:bg-dark-panels"
     >
       <p class="font-bold mb-2 text-[20px]">Метрики</p>
-      <div class="w-full h-32 bg-gray-100 rounded"></div>
+      <div class="w-full h-70 rounded overflow-hidden">
+        <img src="/mock/metrics.png" alt="" class="w-full h-full" />
+      </div>
     </div>
   </div>
 </template>
