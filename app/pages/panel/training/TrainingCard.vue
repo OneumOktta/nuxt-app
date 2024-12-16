@@ -8,7 +8,7 @@
         <h2 class="font-bold text-lg mb-2">Нейросеть</h2>
         <div class="text-gray-400 text-xs flex items-center gap-2">
           <span class="flex items-center gap-1">
-            <span>⏱ 30 мин</span>
+            <span><img src="/icons/time.svg" alt="" /> 30 мин</span>
           </span>
           <span>📊 Средний</span>
         </div>
