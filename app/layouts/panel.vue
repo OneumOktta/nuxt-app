@@ -14,7 +14,7 @@ import PanelSidebar from "~/components/panel/PanelSidebar.vue";
         <PanelSidebar />
       </aside>
 
-      <main class="col-start-2">
+      <main class="col-start-2 h-full">
         <slot />
       </main>
     </div>
