@@ -42,7 +42,7 @@ const requestNewIntegration = () => {
             <input
               type="text"
               placeholder="Поиск..."
-              class="w-full h-full text-sm rounded-2xl border border-gray-300 bg-light-panels dark:bg-dark-panels px-4 py-2 pl-10 focus:outline-none focus:ring-2 focus:ring-purple-400"
+              class="w-full h-full text-sm rounded-2xl border border-purple-300 hover:border-[#3F00A2] bg-light-panels dark:bg-dark-panels px-4 py-2 pl-10 focus:outline-none focus:ring-2 focus:ring-purple-400 "
             />
             <span
               class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"

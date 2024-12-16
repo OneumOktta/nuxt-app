@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative h-[156px] border border-purple-300 rounded-lg p-4 bg-light-panels dark:bg-dark-panels shadow-sm hover:shadow-md transition hover:scale-105 cursor-pointer"
+    class="relative h-[156px] border border-purple-300 rounded-lg p-4 bg-light-panels dark:bg-dark-panels shadow-sm hover:shadow-md transition hover:scale-105 cursor-pointer hover:border-[#3F00A2]"
     @mouseover="isHovered = true"
     @mouseleave="isHovered = false"
   >

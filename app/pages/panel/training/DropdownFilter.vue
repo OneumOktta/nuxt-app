@@ -23,18 +23,18 @@ function selectOption(option) {
     <!-- Кнопка -->
     <button
       @click="isOpen = !isOpen"
-      class="flex justify-between items-center w-full px-4 py-2 border border-gray-300 rounded-xl hover:shadow focus:outline-none bg-light-panels dark:bg-dark-panels w-full gap-2"
+      class="flex justify-between items-center w-full px-4 py-2 border border-purple-300 hover:border-[#3F00A2] rounded-xl hover:shadow focus:outline-none bg-light-panels dark:bg-dark-panels w-full gap-2"
     >
       <span>{{ title }}: {{ selectedOption }}</span>
       <span :class="{ 'rotate-180': isOpen }" class="transition-transform">
-        &#708;
+        <img src="/icons/down.svg" alt="" class="w-6 h-6" />
       </span>
     </button>
 
     <!-- Выпадающий список -->
     <div
       v-if="isOpen"
-      class="absolute mt-2 w-full bg-light-panels dark:bg-dark-panels border border-gray-300 rounded-xl shadow-lg z-20 w-full"
+      class="absolute mt-2 w-full bg-light-panels dark:bg-dark-panels border border-purple-300 hover:border-[#3F00A2] rounded-xl shadow-lg z-20 w-full overflow-hidden"
     >
       <ul>
         <li

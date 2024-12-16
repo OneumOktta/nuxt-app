@@ -14,8 +14,13 @@ const progressOptions = ["Начато", "В процессе", "Заверше�
   <PanelContent>
     <!-- Заголовок -->
     <div class="flex justify-between items-center mb-6">
-      <h1 class="text-3xl font-bold">Обучение</h1>
-      <div class="w-1/4">
+      <div class="flex items-center gap-10">
+        <img src="/icons/left.svg" alt="" />
+        <h1 class="text-3xl font-bold">Обучение</h1>
+      </div>
+      <div
+        class="w-1/4 px-7 py-2 border border-purple-300 hover:border-[#3F00A2] rounded-2xl mr-[86px]"
+      >
         <p class="text-gray-500 text-sm mb-1">Ваш прогресс</p>
         <div class="w-full bg-gray-200 rounded-full h-2 relative">
           <div
@@ -28,7 +33,7 @@ const progressOptions = ["Начато", "В процессе", "Заверше�
     </div>
 
     <!-- Фильтры -->
-    <div class="flex justify-between items-start p-6 gap-4">
+    <div class="flex justify-between items-start p-6 gap-4 px-[86px]">
       <!-- Список 1 -->
       <DropdownFilter title="Уровень сложности" :options="difficultyOptions" />
 
@@ -40,7 +45,7 @@ const progressOptions = ["Начато", "В процессе", "Заверше�
     </div>
 
     <!-- Grid карточек -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-[86px]">
       <TrainingCard v-for="n in 6" :key="n" />
     </div>
   </PanelContent>

@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 <template>
   <div
-    class="relative h-[200px] border border-purple-300 rounded-2xl p-[25px] bg-light-panels dark:bg-dark-panels shadow-sm hover:shadow-md transition hover:scale-105 cursor-pointer"
+    class="relative h-[200px] border border-purple-300 hover:border-[#3F00A2] rounded-2xl p-[25px] bg-light-panels dark:bg-dark-panels shadow-sm hover:shadow-md transition hover:scale-105 cursor-pointer"
   >
     <div>
       <div class="flex items-center justify-between">

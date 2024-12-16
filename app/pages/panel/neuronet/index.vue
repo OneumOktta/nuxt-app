@@ -1,95 +1,114 @@
 <script setup lang="ts">
 definePageMeta({
-	layout: 'panel',
-})
+  layout: "panel",
+});
+import DropdownFilter from "~/pages/panel/training/DropdownFilter.vue";
+
+// Опции для каждого списка
+const moduleOptions = ["Нейросеть", "Интеграции", "Чат боты"];
 </script>
 
 <template>
-	<PanelContent>
-		<div class="min-h-screen bg-gray-50 p-6">
-			<!-- Header Section -->
-			<div class="mb-8">
-				<h1 class="text-3xl font-bold text-gray-900">Нейросеть</h1>
-				<p class="mt-2 text-gray-600">
-					Управление настройками нейросети и мониторинг
-				</p>
-			</div>
-
-			<!-- Main Content -->
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-				<!-- Stats Card -->
-				<div class="bg-white rounded-lg shadow p-6">
-					<h2 class="text-xl font-semibold text-gray-800 mb-4">Статистика</h2>
-					<div class="space-y-4">
-						<div class="flex justify-between items-center">
-							<span class="text-gray-600">Запросов сегодня</span>
-							<span class="font-medium text-gray-900">127</span>
-						</div>
-						<div class="flex justify-between items-center">
-							<span class="text-gray-600">Активных моделей</span>
-							<span class="font-medium text-gray-900">3</span>
-						</div>
-					</div>
-				</div>
-
-				<!-- Settings Card -->
-				<div class="bg-white rounded-lg shadow p-6">
-					<h2 class="text-xl font-semibold text-gray-800 mb-4">Настройки</h2>
-					<div class="space-y-4">
-						<div class="flex flex-col">
-							<label class="text-sm text-gray-600 mb-1"
-								>Модель по умолчанию</label
-							>
-							<select class="border rounded-md p-2">
-								<option>GPT-3.5</option>
-								<option>GPT-4</option>
-								<option>Claude</option>
-							</select>
-						</div>
-						<div class="flex items-center">
-							<label class="inline-flex items-center">
-								<input
-									type="checkbox"
-									class="form-checkbox h-5 w-5 text-blue-600"
-								/>
-								<span class="ml-2 text-gray-700">Включить логирование</span>
-							</label>
-						</div>
-					</div>
-				</div>
-
-				<!-- Status Card -->
-				<div class="bg-white rounded-lg shadow p-6">
-					<h2 class="text-xl font-semibold text-gray-800 mb-4">
-						Статус системы
-					</h2>
-					<div class="space-y-4">
-						<div class="flex items-center">
-							<div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-							<span class="text-gray-700">Система активна</span>
-						</div>
-						<div class="text-sm text-gray-600">
-							Последнее обновление: 5 минут назад
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Action Buttons -->
-			<div class="mt-8 flex gap-4">
-				<button
-					class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-				>
-					Обновить настройки
-				</button>
-				<button
-					class="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
-				>
-					Просмотр логов
-				</button>
-			</div>
-		</div>
-	</PanelContent>
+  <PanelContent>
+    <!-- Заголовок -->
+    <div class="flex justify-between items-center mb-6">
+      <div class="flex items-center gap-10">
+        <img src="/icons/left.svg" alt="" />
+        <h1 class="text-3xl font-bold">Нейросеть</h1>
+      </div>
+      <div
+        class="w-1/4 px-7 py-2 border border-purple-300 hover:border-[#3F00A2] rounded-2xl mr-[86px]"
+      >
+        <p class="text-gray-500 text-sm mb-1">Ваш прогресс</p>
+        <div class="w-full bg-gray-200 rounded-full h-2 relative">
+          <div
+            class="h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"
+            style="width: 20%"
+          ></div>
+        </div>
+        <span class="text-xs text-gray-600">20% Новичок</span>
+      </div>
+    </div>
+    <div class="flex justify-between items-start p-6 gap-4 px-[86px]">
+      <DropdownFilter title="Уровень сложности" :options="moduleOptions" />
+    </div>
+    <div class="grid grid-cols-[1fr_4fr] grid-rows-[1fr_2fr] gap-4 px-[86px]">
+      <div
+        class="flex flex-col justify-between border border-purple-300 hover:border-[#3F00A2] rounded-2xl p-[25px] bg-light-panels dark:bg-dark-panels shadow-sm hover:shadow-md cursor-pointer col-span-1 row-span-1"
+      >
+        <h2 class="font-bold text-lg mb-2">Нейросеть</h2>
+        <h2 class="font-bold text-lg mb-2">Нейросеть</h2>
+      </div>
+      <div
+        class="flex flex-col items-center justify-center border border-purple-300 hover:border-[#3F00A2] rounded-2xl p-[25px] bg-light-panels dark:bg-dark-panels shadow-sm hover:shadow-md cursor-pointer col-span-1 row-span-2"
+      >
+        <ul class="mb-16 w-full">
+          <li class="border-b border-[#3F00A2] pb-2 mb-2">
+            <h2 class="font-bold text-lg mb-2">1 Как работает нейросеть</h2>
+            <p>2 урока</p>
+          </li>
+          <li class="border-b border-[#3F00A2] pb-2 mb-2">
+            <h2 class="font-bold text-lg mb-2">1 Как работает нейросеть</h2>
+            <p>2 урока</p>
+          </li>
+          <li class="border-b border-[#3F00A2] pb-2 mb-2">
+            <h2 class="font-bold text-lg mb-2">1 Как работает нейросеть</h2>
+            <p>2 урока</p>
+          </li>
+          <li class="border-b border-[#3F00A2] pb-2 mb-2">
+            <h2 class="font-bold text-lg mb-2">1 Как работает нейросеть</h2>
+            <p>2 урока</p>
+          </li>
+        </ul>
+        <NuxtLink to="/panel/neuronet" class="w-1/3">
+          <div
+            class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-3 rounded-2xl shadow-lg hover:scale-105 transition duration-200 mt-4 text-center"
+          >
+            Продолжить модуль
+          </div>
+        </NuxtLink>
+      </div>
+      <div
+        class="border border-purple-300 hover:border-[#3F00A2] rounded-2xl p-[25px] bg-light-panels dark:bg-dark-panels shadow-sm hover:shadow-md cursor-pointer col-span-1 row-span-1"
+      >
+        <h2 class="font-bold text-lg mb-2">Дополнительные материалы</h2>
+        <div class="flex flex-col">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-lg">Триггерные сообщения</h3>
+            <button
+              class="text-[8px] py-1.5 px-4 bg-[#E4DEFF] w-16.5 h-6 rounded-lg"
+            >
+              Перейти
+            </button>
+          </div>
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-lg">Триггерные сообщения</h3>
+            <button
+              class="text-[8px] py-1.5 px-4 bg-[#E4DEFF] w-16.5 h-6 rounded-lg"
+            >
+              Перейти
+            </button>
+          </div>
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-lg">Триггерные сообщения</h3>
+            <button
+              class="text-[8px] py-1.5 px-4 bg-[#E4DEFF] w-16.5 h-6 rounded-lg"
+            >
+              Перейти
+            </button>
+          </div>
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-lg">Триггерные сообщения</h3>
+            <button
+              class="text-[8px] py-1.5 px-4 bg-[#E4DEFF] w-16.5 h-6 rounded-lg"
+            >
+              Перейти
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </PanelContent>
 </template>
 
 <style lang="scss" scoped></style>
