@@ -43,20 +43,68 @@ const moduleOptions = ["Нейросеть", "Интеграции", "Чат б�
         class="flex flex-col items-center justify-center border border-purple-300 hover:border-[#3F00A2] rounded-2xl p-[25px] bg-light-panels dark:bg-dark-panels shadow-sm hover:shadow-md cursor-pointer col-span-1 row-span-2"
       >
         <ul class="mb-16 w-full">
-          <li class="border-b border-[#3F00A2] pb-2 mb-2">
-            <h2 class="font-bold text-lg mb-2">1 Как работает нейросеть</h2>
+          <li class="border-b border-[#3F00A2] py-2 my-2">
+            <div class="flex justify-between items-center">
+              <h2 class="font-bold text-lg mb-2">1 Как работает нейросеть</h2>
+              <div class="flex gap-8 items-end">
+                <div class="flex flex-col items-center gap-1">
+                  <img src="/icons/time.svg" alt="" width="20" height="20" />
+                  <p class="text-[8px]">30 мин</p>
+                </div>
+                <div class="flex flex-col items-center gap-1">
+                  <img src="/icons/done.svg" alt="" width="20" height="20" />
+                  <p class="text-[8px]">Завершено</p>
+                </div>
+              </div>
+            </div>
             <p>2 урока</p>
           </li>
-          <li class="border-b border-[#3F00A2] pb-2 mb-2">
-            <h2 class="font-bold text-lg mb-2">1 Как работает нейросеть</h2>
+          <li class="border-b border-[#3F00A2] py-2 my-2">
+            <div class="flex justify-between items-center">
+              <h2 class="font-bold text-lg mb-2">1 Как работает нейросеть</h2>
+              <div class="flex gap-8 items-end">
+                <div class="flex flex-col items-center gap-1">
+                  <img src="/icons/time.svg" alt="" width="20" height="20" />
+                  <p class="text-[8px]">30 мин</p>
+                </div>
+                <div class="flex flex-col items-center gap-1">
+                  <img src="/icons/process.svg" alt="" width="20" height="20" />
+                  <p class="text-[8px]">В процессе</p>
+                </div>
+              </div>
+            </div>
             <p>2 урока</p>
           </li>
-          <li class="border-b border-[#3F00A2] pb-2 mb-2">
-            <h2 class="font-bold text-lg mb-2">1 Как работает нейросеть</h2>
+          <li class="border-b border-[#3F00A2] py-2 my-2">
+            <div class="flex justify-between items-center">
+              <h2 class="font-bold text-lg mb-2">1 Как работает нейросеть</h2>
+              <div class="flex gap-8 items-end">
+                <div class="flex flex-col items-center gap-1">
+                  <img src="/icons/time.svg" alt="" width="20" height="20" />
+                  <p class="text-[8px]">30 мин</p>
+                </div>
+                <div class="flex flex-col items-center gap-1">
+                  <img src="/icons/null.svg" alt="" width="20" height="20" />
+                  <p class="text-[8px]">Не начато</p>
+                </div>
+              </div>
+            </div>
             <p>2 урока</p>
           </li>
-          <li class="border-b border-[#3F00A2] pb-2 mb-2">
-            <h2 class="font-bold text-lg mb-2">1 Как работает нейросеть</h2>
+          <li class="border-b border-[#3F00A2] py-2 my-2">
+            <div class="flex justify-between items-center">
+              <h2 class="font-bold text-lg mb-2">1 Как работает нейросеть</h2>
+              <div class="flex gap-8 items-end">
+                <div class="flex flex-col items-center gap-1">
+                  <img src="/icons/time.svg" alt="" width="20" height="20" />
+                  <p class="text-[8px]">30 мин</p>
+                </div>
+                <div class="flex flex-col items-center gap-1">
+                  <img src="/icons/null.svg" alt="" width="20" height="20" />
+                  <p class="text-[8px]">Не начато</p>
+                </div>
+              </div>
+            </div>
             <p>2 урока</p>
           </li>
         </ul>
